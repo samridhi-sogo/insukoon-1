@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Careers | INSUKOON</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:100,100i,200,200i,300,300i,400,400i,600,600i,700,700i|Muli:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Pompiere&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/slick/slick-theme.css" rel="stylesheet">
+  <link href="assets/vendor/slick/slick.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/book.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <style>
+  /*--------------------------------------------------------------
+# Careers
+--------------------------------------------------------------*/
+#career-hero {
+  width: 100%;
+  height: 60vh;
+  background: url("assets/img/about-1.jpg") center center;
+  background-size: cover;
+  position: relative;
+  /* margin-top: 60px; */
+  padding: 0;
+}
+
+#career-hero:before {
+  content: "";
+  background: rgba(56, 64, 70, 0.7);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#career-hero .container {
+  z-index: 2;
+}
+
+#career-hero h1 {
+  margin: 0 0 10px 0;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #fff;
+}
+
+#career-hero h1 span {
+  border-bottom: 4px solid #3498db;
+}
+
+#career-hero h2 {
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 30px;
+  font-size: 1.5rem;
+  font-weight:200;
+}
+
+#career-hero .btn-get-started {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: 2px;
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 4px;
+  transition: ease-in-out 0.3s;
+  color: #fff;
+  background: #3498db;
+  text-transform: uppercase;
+}
+
+#career-hero .btn-get-started:hover {
+  background: #4ea5e0;
+}
+
+@media (max-width: 992px) {
+  #career-hero {
+    height: calc(100vh - 70px);
+  }
+}
+
+@media (max-width: 768px) {
+  #career-hero h1 {
+    font-size: 30px;
+    line-height: 36px;
+  }
+  #career-hero h2 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+}
+
+/*--------------------------------------------------------------
+# open-positions
+--------------------------------------------------------------*/
+.positions {
+  overflow: hidden;
+  padding:60px 0;
+}
+
+.positions .nav-pills {
+  border: 0;
+}
+
+.positions .nav-pills p{
+  font-size: 13px;
+  font-weight: 500;
+  padding: 0;
+  line-height: 1px;
+  margin: 5px 0;
+  letter-spacing: 2px;
+  color: #aaaaaa;
+}
+
+.positions .nav-link {
+  border: 0;
+  transition: 0.3s;
+  color: #556270;
+  border-radius: 0;
+  border-right: 4px inset #fff;
+  border-bottom: 4px inset #fff;
+  font-weight: 600;
+  padding: 15px;
+  margin:15px 12px 0 12px;
+}
+
+.positions .nav-link:hover {
+  color: #3498db;
+  border-color: #ccc;
+}
+
+.positions .nav-link.active {
+  color: #3498db;
+  background: #fff;
+  border-color: #3498db;
+}
+
+.positions .tab-pane.active {
+  -webkit-animation: fadeIn 0.5s ease-out;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.positions .details h3 {
+  font-family:"Poppins", sans-serif;
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #556270;
+}
+
+.positions .details p, .details ul {
+  color: #777777;
+}
+
+.positions .details p:last-child {
+  margin-bottom: 0;
+}
+
+.positions .btn-mail-cv {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: 2px;
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 4px;
+  transition: ease-in-out 0.3s;
+  color: #fff;
+  background: #3498db;
+  text-transform: uppercase;
+}
+
+.positions .btn-mail-cv:hover {
+  background: #4ea5e0;
+}
+
+@media (max-width: 992px) {
+  .positions .nav-link {
+    border: 0;
+    padding: 15px;
+  }
+  .positions .nav-link.active {
+    color: #fff;
+    background: #3498db;
+  }
+}
+
+</style>
+
+  <!-- =======================================================
+   Author: Samridhi Jain
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Top Bar ======= -->
+  <section id="topbar" class="d-flex align-items-center">
+    <div class="container d-flex justify-content-center justify-content-md-between">
+      <div class="contact-info d-flex align-items-center">
+        <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:info@insukoon.com">info@insukoon.com</a></i>
+        <!-- <i class="bi bi-phone d-flex align-items-center ms-4"><span>+1 5589 55488 55</span></i> -->
+      </div>
+      <div class="social-links d-none d-md-flex align-items-center">
+        <a href="https://twitter.com/insukoon" class="twitter" target="_blank"><i class="bi bi-twitter"></i></a>
+        <a href="https://www.facebook.com/insukoon.company/" class="facebook" target="_blank"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/insukoon_/" class="instagram" target="_blank"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/insukoon" class="linkedin" target="_blank"><i class="bi bi-linkedin"></i></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex align-items-center">
+    <div class="container d-flex justify-content-between">
+
+      <div class="logo">
+        <!-- <h1 class="text-light"><a href="index.html">Flattern</a></h1> -->
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li class="dropdown"><a href="about.html">Who We Are</a>
+			<ul>
+			  <li><a href="about.html#about-us">About Us</a></li>
+			  <li><a href="about.html#mission-vision">Mission & Vision</a></li>
+			  <li><a href="about.html#values">Our Core Values</a></li>
+			  <li><a href="about.html#whyus">Our USP</a></li>
+			  <li><a href="about.html#team">Team</a></li>
+			</ul>
+		  </li>
+		  <li class="dropdown"><a href="schools.html">What We Do</a>
+                <ul>
+                  <li><a href="schools.html">Schools</a></li>
+                  <li><a href="corporate.html">Corporates</a></li>
+                  <li><a href="ngo.html">NGOs</a></li>
+                </ul>
+          </li>
+          <li><a href="contact.html">Get in Touch</a></li>
+		  <li><a class="getstarted" class="active" href="careers.html">We're Hiring!</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar-->
+
+    </div>
+  </header><!-- End Header -->
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs" style="margin-top:0">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Careers</h2>
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li>Careers</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+  
+  
+  <!-- ======= Hero Section ======= -->
+  <section id="career-hero" class="d-flex flex-column justify-content-center align-items-center">
+    <div class="container text-center text-md-left" data-aos="fade-up">
+      <h1>Come, Work with <span>INSUKOON!</span></h1>
+	  <h2>Join us to revolutionize the future of education...</h2>
+      <!-- <h2>We are Research and Development company in education industry focused on student wellness and their all around development (mental, physical, behavioral, social, emotional) throughout their academic life.</h2> -->
+      <a href="#positions" class="btn-get-started scrollto">Open Positions</a>
+    </div>
+  </section><!-- End Hero -->
+  
+  <!-- ======= Open Positions Section ======= https://www.taskrabbit.com/careers https://www.crunchyroll.com/about/jobs/index.html-->
+    <section id="positions" class="positions">
+      <div class="container">
+
+        <div class="section-title" data-aos="zoom-out">
+          <span>Open positions</span>
+		  <h2>Join Our Team</h2>
+          <p><br/>Ready to start our journey together? Reach out today!<br/></p>
+        </div>
+        <div class="row">
+          <div class="col-lg-4" data-aos="fade-right">
+            <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+              <button class="nav-link active" id="v-pills-gr-tab" data-bs-toggle="pill" data-bs-target="#v-pills-gr" type="button" role="tab" aria-controls="v-pills-gr" aria-selected="true">HR Executive<br><p><i class='bx bxs-map-pin'></i> Remote</p></button>
+			  <button class="nav-link" id="v-pills-hr-tab" data-bs-toggle="pill" data-bs-target="#v-pills-hr" type="button" role="tab" aria-controls="v-pills-hr" aria-selected="false">Graphic Designer<br><p><i class='bx bxs-map-pin'></i> Remote</p></button>
+			  <button class="nav-link" id="v-pills-mr-tab" data-bs-toggle="pill" data-bs-target="#v-pills-mr" type="button" role="tab" aria-controls="v-pills-mr" aria-selected="false">Marketing Executive<br><p><i class='bx bxs-map-pin'></i> Pune</p></button>
+			  <!-- <button class="nav-link" id="v-pills-tr-tab" data-bs-toggle="pill" data-bs-target="#v-pills-tr" type="button" role="tab" aria-controls="v-pills-tr" aria-selected="false">Teachers<br><p><i class='bx bxs-map-pin'></i> Pune</p></button> -->
+            </div>
+          </div>
+          <div class="col-lg-8 mt-4 mt-lg-0" data-aos="fade-left">
+            <div class="tab-content" id="v-pills-tabContent">
+              <div class="tab-pane fade active show" id="v-pills-gr" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                <div class="row">
+                  <div class="col-lg-12 details order-2 order-lg-1">
+                    <p>The ideal candidate will have strong creative skills and a portfolio of work which demonstrates their passion for illustrative design and typography. This candidate will have experiences in working with numerous different design platforms such as digital and print forms. </p>
+                    <p class="font-italic"><mark>We are looking for fresh ideas (1-2 years of experience), <ins>female candidates only.</ins></mark></p>
+					<h3>Responsibilities</h3>
+					<ul>
+						<li>Collaborate with the team to ensure consistency of designs across various media outlets</li>
+						<li>Create compelling and effective vector illustrations,flat designs, print and digital media</li>
+						<li>Maintain awareness of current industry and technology standards, social media, competitive landscape and market trends</li>
+						<li>Available for immediate joining</li>
+						<li>Laptop/desktop with good configuration and high-speed broadband connection</li>
+					</ul>
+					<h3>Qualifications</h3>
+					<ul>
+						<li>Bachelor's degree in Graphic Design or related field or studying graphic design in an accredited university.</li>
+						<li>Proficient in Adobe Creative Suite</li>
+						<li>Strong communication, conceptual thinking, typography skills and design skills</li>
+						<li>Portfolio of work</li>
+					</ul>
+					<h3>Compensation</h3>
+					<ul>
+						<li>Industry Standard</li>
+					</ul>
+					<br/>
+					<a href="mailto:hr@insukoon.com?subject=Application for Graphic Designer Position" class="btn-mail-cv scrollto">Mail Your Resume NOW!</a>
+				  </div>
+                  <!-- <div class="col-lg-4 text-center order-1 order-lg-2"> -->
+                    <!-- <img src="assets/img/positions.jpg" alt="" class="img-fluid"> -->
+                  <!-- </div> -->
+                </div>
+              </div>
+              <div class="tab-pane" id="v-pills-hr" role="tabpanel" aria-labelledby="v-pills-hr-tab">
+                <div class="row">
+                  <div class="col-lg-12 details order-2 order-lg-1">
+                    <p>The ideal candidate will support the full scope of Human Resources responsibilities and partner with the organization on strategic initiatives. They will maintain and enhance the organization's human resources by planning, implementing, and evaluating human resources policies, programs, and practices.  </p>
+                    <p class="font-italic"><mark>We are looking for HR Executives(freshers/1-2 years of experience), <ins>female candidates only.</ins></mark></p>
+					<h3>Responsibilities</h3>
+					<ul>
+						<li>Recruit and Onboard new hires</li>
+						<li>Conduct performance management and provide feedback, Manage Payroll and benefits for employees</li>
+						<li>Fill Trackers for Work Quality Assessment,  </li>
+						<li>Available for immediate joining</li>
+					</ul>
+					<h3>Qualifications</h3>
+					<ul>
+						<li>Bachelor's degree or relevant experience (1-2 years)</li>
+						<li>Strong recruiting and demonstrated ability to improve talent acquisition strategies</li>
+						<li>Demonstrated expertise training managers and employees</li>
+						<li>Strong organizational, critical thinking and communications skills</li>
+						<li>Attention to detail and good judgement</li>
+					</ul>
+					<h3>Compensation</h3>
+					<ul>
+						<li>Industry Standard</li>
+					</ul>
+					<br/>
+					<a href="mailto:hr@insukoon.com?subject=Application for HR Executive Position" class="btn-mail-cv scrollto">Mail Your Resume NOW!</a>
+				  </div>
+                  <!-- <div class="col-lg-4 text-center order-1 order-lg-2"> -->
+                    <!-- <img src="assets/img/positions.jpg" alt="" class="img-fluid"> -->
+                  <!-- </div> -->
+                </div>
+              </div>
+              <div class="tab-pane" id="v-pills-mr" role="tabpanel" aria-labelledby="v-pills-mr-tab">
+                <div class="row">
+                  <div class="col-lg-12 details order-2 order-lg-1">
+                    <p>The ideal candidate will be responsible for creating and executing our marketing strategy. You will lead our marketing campaigns, evaluate our marketing performance metrics, and collaborate with internal teams. You will have a strong marketing background with excellent communication skills and attention to detail. </p>
+                    <p class="font-italic"><mark>We are looking for Marketing Executives(freshers / 1-2 years of experience), <ins>female candidates only.</ins></mark></p>
+					<h3>Responsibilities</h3>
+					<ul>
+						<li>Define and execute the marketing and communication activities according to our marketing plan</li>
+						<li>Coordinate all marketing activities to generate leads </li>
+						<li>Collaborate with other teams to promote offerings</li>
+						<li>Inform clients and prospects of products and services through creative marketing strategies</li>
+						<li>Manage social media platforms for INSUKOON</li>
+					</ul>
+					<h3>Qualifications</h3>
+					<ul>
+						<li>MBA degree</li>
+						<li>Strong verbal, written, and organizational skills</li>
+						<li>Ability to Multi-task</li>
+						<li>Attention to detail and good judgement</li>
+					</ul>
+					<h3>Compensation</h3>
+					<ul>
+						<li>High incentive-based pay structure for first three months, post which fixed salary will be given depending on individual competency.</li>
+						<li><strong>Unlimited Earning Opportunity</strong></li>
+					</ul>
+					<br/>
+					<a href="mailto:hr@insukoon.com?subject=Application for Marketing Manager Position" class="btn-mail-cv scrollto">Mail Your Resume NOW!</a>
+				  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="v-pills-tr" role="tabpanel" aria-labelledby="v-pills-tr-tab">
+                <div class="row">
+                  <div class="col-lg-12 details order-2 order-lg-1">
+                    <p>The ideal candidate will be responsible for teaching the non-academic subject (unique curriculum designed by INSUKOON) to students of upto 8th grade standard. You will be instrumental in guiding the children towards following the curriculum and also in making sure that they enjoy themselves while doing so.   </p>
+                    <p class="font-italic">We are looking for a Teachers(3-4 years of experience), <ins>female candidates only.</ins></p>
+					<h3>Responsibilities</h3>
+					<ul>
+						<li>Prepare lesson plans and activities in advance that teach core objectives that is relevant to the subject, also showing students how this knowledge is useful in the real world</li>
+						<li>Track and report performance data to determine where changes need to be made and which strategies and methods are working. </li>
+						<li>Encourage students and parents to get actively involved in our program.</li>
+						<li>Handle feedback positively and work on improvement areas. </li>
+					</ul>
+					<h3>Qualifications</h3>
+					<ul>
+						<li>Excellent speaking, reading and writing skills</li>
+						<li>Patience and resilience personality</li>
+						<li>Dedication towards students and education</li>
+						<li>Motivated for self-learning and renewal</li>
+						<li>Ability to write and/or understand engaging and detailed lesson plans is a definite advantage</li>
+						<li>Graduate / Post-Graduate with 3-4 years of relevant experience</li>
+					</ul>
+					<h3>Compensation</h3>
+					<ul>
+						<li>Industry Standard</li>
+						<li>***Training on the subject will be given to teachers</li>
+					</ul>
+					<br/>
+					<a href="mailto:hr@insukoon.com?subject=Application for Teacher Position" class="btn-mail-cv scrollto">Mail Your Resume NOW!</a>
+				  </div>
+                  <!-- <div class="col-lg-4 text-center order-1 order-lg-2"> -->
+                    <!-- <img src="assets/img/positions.jpg" alt="" class="img-fluid"> -->
+                  <!-- </div> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Features Section -->
+	
+  </main><!-- End #main -->
+
+  <!---Footer--->
+	<div>
+			<svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+				<defs>
+					<path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+				</defs>
+				<g class="parallax">
+					<!-- <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(114,137,218,0.6)" /> 
+					<!-- <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(114,137,218,0.2)" /> -->
+					<use xlink:href="#gentle-wave" x="48" y="7" fill="#503648" />
+				</g>
+			</svg>
+		<footer id="footer">
+
+    <div class="footer-top">
+
+      <div class="container">
+
+        <div class="row  justify-content-center">
+          <div class="col-lg-6">
+            <p>Join us on our Journey. Help us expand our reach across the country. To know our initiative, <a href="schools.html">click here</a><br/><br/> GET INVOLVED TODAY!</p>
+          </div>
+        </div>
+
+        <div class="row footer-newsletter justify-content-center">
+          <div class="col-lg-6">
+            <form action="" method="post">
+              <input type="email" name="email" placeholder="Enter your Email"><input type="submit" value="Submit">
+            </form>
+          </div>
+        </div>
+
+        <div class="social-links">
+          <a href="https://twitter.com/insukoon" target="_blank" class="twitter"><i class="bx bxl-twitter"></i></a>
+          <a href="https://www.facebook.com/insukoon.company/" target="_blank" class="facebook"><i class="bx bxl-facebook"></i></a>
+          <a href="https://www.instagram.com/insukoon_/" target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/insukoon" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container footer-bottom clearfix">
+      <div class="copyright">
+        © Copyright <strong><span>INSUKOON</span></strong> 2021. All Rights Reserved
+      </div>
+    </div>
+  </footer>
+	</div>
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/jquery/jquery-3.1.0.min.js"></script>
+  <script src="assets/vendor/jquery/jquery.easing.min.js"></script>
+   <script src="assets/vendor/jquery/jquery.sticky.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/slick/slick.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+  
+  <script>
+	jQuery(document).ready(function ($) {
+        $('#tabs').tab();
+    });
+</script>
+
+</body>
+
+</html>
