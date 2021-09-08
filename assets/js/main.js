@@ -307,12 +307,12 @@
 
   /**
    * Initiate portfolio lightbox 
-   */
+   *
   const portfolioLightbox = GLightbox({
     selector: '.portfolio-lightbox',
 	slideHTML: '<div class="gslide" onContextMenu="return false;"><div class="gslide-inner-content"><div class="ginner-container"><div class="gslide-media"></div><div class="gslide-description"><div class="gdesc-inner"><h4 class="gslide-title"></h4><div class="gslide-desc"></div></div></div></div></div></div>'
   });
-
+  */
   /**
    * Portfolio details slider
    */
